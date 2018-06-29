@@ -14,6 +14,6 @@ Find the dataset at [Kaggle PSA dataset](https://www.kaggle.com/c/passenger-scre
 
 Zones about how many ways do they examine using the 3D-image from the body scanner is provided as shown below. Instrument used is also displayed.
 
-[body_zones](https://github.com/TejasReddy9/psa_homeland/blob/master/body_zones.png?raw=true)
+![body_zones](https://github.com/TejasReddy9/psa_homeland/blob/master/body_zones.png?raw=true)
 
-[instrument](https://github.com/TejasReddy9/psa_homeland/blob/master/millimeter_scanner.jpg?raw=true)
+![instrument](https://github.com/TejasReddy9/psa_homeland/blob/master/millimeter_scanner.jpg?raw=true)
