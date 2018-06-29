@@ -10,4 +10,10 @@ As they have put their 3D-image screening dataset on Kaggle, I got an opputinity
 
 ## Dataset
 
-Find the dataset at [Kaggle PSA dataset](https://www.kaggle.com/c/passenger-screening-algorithm-challenge/data). Or use 
+Find the dataset at [Kaggle PSA dataset](https://www.kaggle.com/c/passenger-screening-algorithm-challenge/data). Data is pretty standard and all the cleaning is  done by themselves before exposing it to Kaggle, hence I started making my EDA report(Exploratory Data Analysis). 
+
+Zones about how many ways do they examine using the 3D-image from the body scanner is provided as shown below. Instrument used is also displayed.
+
+[body_zones]()
+
+[instrument]()
