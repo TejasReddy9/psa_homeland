@@ -12,8 +12,10 @@ As they have put their 3D-image screening dataset on Kaggle, I got an opputinity
 
 Find the dataset at [Kaggle PSA dataset](https://www.kaggle.com/c/passenger-screening-algorithm-challenge/data). Data is pretty standard and all the cleaning is  done by themselves before exposing it to Kaggle, hence I started making my EDA report(Exploratory Data Analysis). 
 
-Zones about how many ways do they examine using the 3D-image from the body scanner is provided as shown below. Instrument used is also displayed.
+Zones about how many ways do they examine using the 3D-image from the body scanner is provided as shown below. Instrument used is also displayed. I've taken initially the reduced dataset of only zone 17, then working on scaling it to other zones.
 
 ![body_zones](https://github.com/TejasReddy9/psa_homeland/blob/master/body_zones.png?raw=true)
 
 ![instrument](https://github.com/TejasReddy9/psa_homeland/blob/master/millimeter_scanner.jpg?raw=true)
+
+Scanned 3D-images have a certain way to read in images for our analysis. A IPython Notebook regarding reading images in Python was [posted](https://www.kaggle.com/wcukierski/reading-images) in Kaggle Kernels by [William Cukierski](https://www.kaggle.com/wcukierski), which was very useful.
