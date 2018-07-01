@@ -5,7 +5,7 @@ import numpy as np
 import os
 import pandas as pd
 
-# From William Curkierski Kaggle Kernal 'Reading images'
+# From William Curkierski Kaggle Kernel 'Reading images'
 def read_header(infile):
     """Read image header (first 512 bytes)
     """
@@ -96,7 +96,7 @@ def read_header(infile):
     h['spare_end'] = np.fromfile(fid, dtype = np.float32, count = 10)
     return h
 
-# From William Curkierski Kaggle Kernal 'Reading images'
+# From William Curkierski Kaggle Kernel 'Reading images'
 def read_data(infile):
     """Read any of the 4 types of image files, returns a numpy array of the image contents
     """
@@ -132,8 +132,8 @@ def read_data(infile):
     else:
         return real, imag
 
-z6samlist = os.listdir('/Users/TejasReddy9/Documents/Kaggle/TSA/data/Z6_n30_9.18.17')
-z6paths = ['/Users/TejasReddy9/Documents/Kaggle/TSA/data/Z6_n30_9.18.17/' + z6sam for z6sam in z6samlist]
+z6samlist = os.listdir('/Users/TejasReddy9/Documents/PSA_Homeland/')
+z6paths = ['/Users/TejasReddy9/Documents/PSA_Homeland/' + z6sam for z6sam in z6samlist]
 del z6paths[0]
 
 arr_list = [read_data(z6path) for z6path in z6paths]
@@ -143,10 +143,10 @@ maximum = np.max(x)
 minimum = np.min(x)
 x = (x - minimum)/(maximum - minimum)
 
-z6sample30 = pd.read_csv('/Users/TejasReddy9/Documents/Kaggle/TSA/data/Z6_samn30_9.18.17.csv')
+z6sample30 = pd.read_csv('/Users/TejasReddy9/Documents/PSA_Homeland/zone6_sample30.csv')
 z6sample30.sort_values('Id', inplace=True)
 
-z6sample_90 = pd.read_csv('/Users/TejasReddy9/Documents/Kaggle/TSA/data/Z6_samn90_10.6.17.csv')
+z6sample_90 = pd.read_csv('/Users/TejasReddy9/Documents/PSA_Homeland/zone6_sample90.csv')
 
 z6sample_120 = z6sample30.append(z6sample_90, ignore_index=True)
 z6sample_120.sort_values('Id', inplace=True)
