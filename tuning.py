@@ -166,16 +166,16 @@ from sklearn.model_selection import GridSearchCV
 
 def build_classifier(optimizer):
     classifier = Sequential()
-    classifier.add(Dense(25, input_shape=(512, 660, 16), activation='relu', kernel_initializer='uniform'))
-    classifier.add(Dropout(rate=0.1))
+    classifier.add(Dense(25, input_shape=(512, 660, 16), activation='relu', kernel_initializer='uniform', name='dense1'))
+    classifier.add(Dropout(rate=0.1, name='dropout1'))
     classifier.add(Flatten())
-    classifier.add(Dense(50, activation='relu', kernel_initializer='uniform'))
-    classifier.add(Dropout(rate=0.1))
-    classifier.add(Dense(50, activation='relu', kernel_initializer='uniform'))
-    classifier.add(Dropout(rate=0.1))
-    classifier.add(Dense(50, activation='relu', kernel_initializer='uniform'))
-    classifier.add(Dropout(rate=0.1))
-    classifier.add(Dense(1, activation='sigmoid', kernel_initializer='uniform'))
+    classifier.add(Dense(50, activation='relu', kernel_initializer='uniform', name='dense2'))
+    classifier.add(Dropout(rate=0.1, name='dropout2'))
+    classifier.add(Dense(50, activation='relu', kernel_initializer='uniform', name='dense3'))
+    classifier.add(Dropout(rate=0.1, name='dropout3'))
+    classifier.add(Dense(50, activation='relu', kernel_initializer='uniform', name='dense4'))
+    classifier.add(Dropout(rate=0.1, name='dropout4'))
+    classifier.add(Dense(1, activation='sigmoid', kernel_initializer='uniform', name='dense5'))
     classifier.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
     return classifier
 
