@@ -36,6 +36,36 @@ I've worked with `.ads` format, and even in that I've only taken Zone 6 initiall
 
 I've done this with the help of `stage1_labels.csv` given by Kaggle, which contains the probability value for each entry. I sampled the data which matches with Zone6 for 30 samples. The Jupyter Notebook I worked on, is [here](https://github.com/TejasReddy9/psa_homeland/blob/master/lables_.ipynb). I've included this in the project files too. If anyone wanted to sample their own set of images and work on them, they can change code here and start working.
 
-## 
+## My Deep learning model
+
+I've created a simple Keras Artificial Neural Networks model in Python. The model is Squential and contains several Dense layers. Design summary for the optimizer which is used by KerasClassifier is:
+*   Sequential Classifier
+*   First Dense layer uses ReLU activation with uniform Kernel Initializer. Input Shape is `(512, 660, 16)`. 
+*   Followed by Dropout layer at rate `0.1`.
+*   Followed by Flatten over the dimensions.
+*   Now, another Dense layer(1) uses ReLU activation with uniform Kernel Initializer.
+*   Followed by Dropout layer(1) at rate `0.1`.
+*   Now, another Dense layer(2) uses ReLU activation with uniform Kernel Initializer.
+*   Followed by Dropout layer(2) at rate `0.1`.
+*   Now, another Dense layer(3) uses ReLU activation with uniform Kernel Initializer.
+*   Followed by Dropout layer(3) at rate `0.1`.
+*   Following these three duals of Dense and Dropout layers, a Dense layer uses Sigmoid activation with uniform Kernel Initializer.
+*   Then we compile the classifier with `optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy']` parameters, which say that we use Binary Cross-Entropy loss function, with performance metrics to be evaluated on accuracy grounds.
+
+| Layer (type)                     | 
+|:---------------------------------|
+| dense1 (Dense)                   | 
+| dropout1 (Dropout)               | 
+| flatten_2 (Flatten)              | 
+| dense2 (Dense)                   | 
+| dropout2 (Dropout)               | 
+| dense3 (Dense)                   | 
+| dropout3 (Dropout)               | 
+| dense4 (Dense)                   | 
+| dropout4 (Dropout)               | 
+| dense5 (Dense)                   | 
 
 
+## Testing and Performance
+
+I've used GridSearchCV in scikit-learn module for validation results. I've used Adam Optimizer and RMSProp Optimizer, number of epochs as 20 with batch size of 10. Based on that pipeline, it gave best parameters and best accuracy among several tests throughout the process. Observed that accuracy was `91%` on Zone 6 and `45%` on Zone 17. I'd love to extend it to full image whenever time and requirements permit.
