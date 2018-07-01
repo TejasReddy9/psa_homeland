@@ -52,20 +52,6 @@ I've created a simple Keras Artificial Neural Networks model in Python. The mode
 *   Following these three duals of Dense and Dropout layers, a Dense layer uses Sigmoid activation with uniform Kernel Initializer.
 *   Then we compile the classifier with `optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy']` parameters, which say that we use Binary Cross-Entropy loss function, with performance metrics to be evaluated on accuracy grounds.
 
-| Layer         | Type    | 
-|:--------------|:--------|
-| dense1        | Dense   |
-| dropout1      | Dropout |
-| flatten_2     | Flatten |
-| dense2        | Dense   |
-| dropout2      | Dropout |
-| dense3        | Dense   |
-| dropout3      | Dropout |
-| dense4        | Dense   |
-| dropout4      | Dropout |
-| dense5        | Dense   |
-
-
 ## Testing and Performance
 
 I've used GridSearchCV in scikit-learn module for validation results. I've used Adam Optimizer and RMSProp Optimizer, number of epochs as 20 with batch size of 10. Based on that pipeline, it gave best parameters and best accuracy among several tests throughout the process. Observed that accuracy was `91%` on Zone 6 and `45%` on Zone 17. I'd love to extend it to full image whenever time and requirements permit.
