@@ -34,7 +34,7 @@ I've worked with `.ads` format, and even in that I've only taken Zone 6 initiall
 
 ## Extracting Zone6 filenames
 
-I've done this with the help of `stage1_labels.csv` given by Kaggle, which contains the probability value for each entry. I sampled the data which matches with Zone6 for 30 samples. The Jupyter Notebook I worked on, is [here](https://raw.githubusercontent.com/TejasReddy9/psa_homeland/master/lables_.ipynb). I've included this in the project files too. If anyone wanted to sample their own set of images and work on them, they can change code here and start working.
+I've done this with the help of `stage1_labels.csv` given by Kaggle, which contains the probability value for each entry. I sampled the data which matches with Zone6 for 30 samples. The Jupyter Notebook I worked on, is [here](https://github.com/TejasReddy9/psa_homeland/blob/master/lables_.ipynb). I've included this in the project files too. If anyone wanted to sample their own set of images and work on them, they can change code here and start working.
 
 ## 
 
